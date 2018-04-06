@@ -17,9 +17,11 @@ Page({
     if (!recharge_amount_min) {
       recharge_amount_min = 0;
     }
+    let recharge_hint = app.globalData.recharge_hint;
     this.setData({
       uid: app.globalData.uid,
-      recharge_amount_min: recharge_amount_min
+      recharge_amount_min: recharge_amount_min,
+      recharge_hint: recharge_hint
     });
   },
 

@@ -156,7 +156,7 @@ page{
   font-size: 13pt;
   line-height: 85rpx;
   height: 85rpx;
-  background: #69C3AA;
+  background: #c9171e;
   color: #fff;
   text-align: center;
   border-radius: 100rpx;

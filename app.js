@@ -25,6 +25,7 @@ App({
         }
       }
     })
+    // 最小充值数量
     wx.request({
       url: 'https://api.it120.cc/' + that.globalData.subDomain + '/config/get-value',
       data: {
@@ -33,6 +34,42 @@ App({
       success: function (res) {
         if (res.data.code == 0) {
           that.globalData.recharge_amount_min = res.data.data.value;
+        }
+      }
+    })
+    // 充值活动参数
+    wx.request({
+      url: 'https://api.it120.cc/' + that.globalData.subDomain + '/config/get-value',
+      data: {
+        key: 'recharge_hint'
+      },
+      success: function (res) {
+        if (res.data.code == 0) {
+          that.globalData.recharge_hint = res.data.data.value;
+        }
+      }
+    })
+    //首页滚动提示栏
+    wx.request({
+      url: 'https://api.it120.cc/' + that.globalData.subDomain + '/config/get-value',
+      data: {
+        key: 'shop_prompt'
+      },
+      success: function (res) {
+        if (res.data.code == 0) {
+          that.globalData.shop_prompt = res.data.data.value;
+        }
+      }
+    })
+    // 关于我们
+    wx.request({
+      url: 'https://api.it120.cc/' + that.globalData.subDomain + '/config/get-value',
+      data: {
+        key: 'about_us'
+      },
+      success: function (res) {
+        if (res.data.code == 0) {
+          that.globalData.about_us = res.data.data.value;
         }
       }
     })
@@ -189,7 +226,7 @@ App({
   },
   globalData:{
     userInfo:null,
-    subDomain: "tz", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
+    subDomain: "shilezhi", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
     version: "2.0",
     shareProfile: '百款精品商品，总有一款适合您' // 首页转发的时候话术
   }

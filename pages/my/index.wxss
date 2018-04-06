@@ -18,7 +18,11 @@
 	margin: 20rpx;
 	border-radius: 50%;
 }
-
+.hongbao-icon{
+  width: 35rpx;
+  height: 40rpx;
+  
+}
 .userinfo-nickname {
   margin-top: 20rpx;
   color: #FFF;
@@ -53,4 +57,24 @@
     height: 80rpx;
     line-height: 80rpx;
     padding-left: 100rpx;
+}
+
+.cs_image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+}
+.contact{
+    width: 80%;
+    margin: 20rpx 20rpx 20rpx 20rpx; 
+    line-height: 80rpx;
+    padding-left: 100rpx;
+    padding-right: 100rpx;
+}
+
+.cs_button {
+  background-color: #fff;
+  border: 0px;
+  height: 100rpx;
+  
 }

@@ -16,7 +16,7 @@ Page({
     goods:[],
     scrollTop:"0",
     loadingMoreHidden:true,
-
+    shop_prompt:"欢迎选购",
     hasNoCoupons:true,
     coupons: [],
     searchInput: '',
@@ -63,9 +63,13 @@ Page({
   },
   onLoad: function () {
     var that = this
+    that.setData({
+      shop_prompt: app.globalData.shop_prompt
+    })
     wx.setNavigationBarTitle({
       title: wx.getStorageSync('mallName')
     })
+    
     /*
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){

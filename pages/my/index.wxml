@@ -9,8 +9,11 @@
       余额 {{balance}} 元， 冻结 {{freeze}} 元
     </view>
     <view style='display:flex;padding-bottom:20rpx;'>
-      <button type='primary' style='width:100%;margin-right:70rpx;' bindtap="recharge">充值</button>
-      <button type='warn' style='width:100%;margin-right:70rpx;' bindtap="withdraw">提现</button>
+      <button type='primary' style='width:100%;margin-right:70rpx;' bindtap="recharge">
+      <image src='/images/hongbao.png' class='hongbao-icon' mode='widthFix'></image>
+      充值</button>
+      <!-- <button type='primary' style='width:100%;margin-right:70rpx;' bindtap="recharge">充值</button> -->
+      <!-- <button type='warn' style='width:100%;margin-right:70rpx;' bindtap="withdraw">提现</button> -->
     </view>
   </view>
   <view class="my-item" style='background:none;display:flex;'>
@@ -35,7 +38,13 @@
   </view>
   <view style="height:20rpx;background: #eee;width:100%;"></view>
   <view class="about" bindtap="aboutUs">
-    关于我们
+        关于我们
+  </view>
+    
+  <view class="contact">
+    <button class="cs_button" plain="true" open-type="contact" session-from="weapp">
+    <image class="cs_image" src="../../images/kefu2.png"></image>
+    </button>
   </view>
 
   <view style="height:20rpx;background: #eee;width:100%;"></view>
@@ -43,7 +52,7 @@
     <button type="warn" bindtap="relogin">重新登录</button>
   </view>
   
-  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <!-- <view style="height:20rpx;background: #eee;width:100%;"></view>
   <view class="version">Powered by EastWorld v {{version}}</view>
-  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view> -->
 </view>

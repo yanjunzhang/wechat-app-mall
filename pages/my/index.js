@@ -5,11 +5,11 @@ Page({
     balance:0,
     freeze:0,
     score:0,
-    score_sign_continuous:0
+    score_sign_continuous:0,
   },
-	onLoad() {
+  onLoad() {
     
-	},	
+  },	
   onShow() {
     this.getUserInfo();
     this.setData({
@@ -36,8 +36,15 @@ Page({
   aboutUs : function () {
     wx.showModal({
       title: '关于我们',
-      content: '本系统基于开源小程序商城系统 https://github.com/EastWorld/wechat-app-mall 搭建，祝大家使用愉快！',
+      content: app.globalData.about_us,
       showCancel:false
+    })
+  },
+  contactUs: function () {
+    wx.showModal({
+      title: '关于我们',
+      content: app.globalData.about_us,
+      showCancel: false
     })
   },
   getPhoneNumber: function(e) {
